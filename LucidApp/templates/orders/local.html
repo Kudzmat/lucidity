@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block body %}
+<h1>Welcome to Local Orders</h1>
+<br>
+<h2>Add Order</h2>
+<form method="POST">
+    {{ local_form.as_p }}
+    {% csrf_token %}
+    <input class="btn btn-primary btn-sm" type="submit" name="submit" value="Add Local Order">
+</form>
+{% endblock %}
